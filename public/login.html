@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" href="/public/global.css" rel="stylesheet">
+    <script src="/public/tailwind.js"></script>
+
+    <style>
+        body {
+            background-image: url(/public/img/simple-house-01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="bg-red-800 h-[100px] pt-5">
+            <a href="/"><img src="/public/logo.png" class="h-16 mx-auto"></a>
+        </nav>
+    </header>
+    <main class="flex items-center">
+        <div class="inline-block rounded bg-[#ffffffdd] w-[500px] md:w-[50vw] border h-[540px] mx-auto my-5 shadow-2xl">
+            <h1 class="text-center text-4xl font-semibold mt-4">Login</h1>
+
+            <div class="mt-16 text-center">
+                <form class="flex flex-col items-center" action="/login" method="post">
+                    <label for="name">Phone </label>
+                    <input type="text" name="phone" placeholder="9372940384"
+                        class="border shadow w-[290px] lg:w-[30vw] h-12 rounded-xl px-3">
+
+                    <label for="name" class="mt-12">Password </label>
+                    <input type="password" name="pass" placeholder="****"
+                        class="border shadow w-[290px] lg:w-[30vw] h-12 rounded-xl px-3">
+
+                    <a href="/forgetpass" class="text-blue-700 mt-2">Forget password?</a>
+                    <span class="mt-5"><input type="checkbox" name="remember"> Remember me</span>
+
+                    <input type="submit" value="Login"
+                        class="px-5 border shadow-xl py-3 rounded mt-[5%] bg-red-900 text-white duration-500 font-semibold hover:shadow-xl hover:bg-white hover:text-red-900">
+
+                </form>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <title>EatnTreat</title>
+  <script src="/public/tailwind.js"></script>
+
+  <link href="/public/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <nav class="bg-red-800 h-[130px] pt-5">
+      <a href="/"><img src="/public/logo.png" class="h-16 mx-auto"></a>
+      <ul class="tm-nav-ul">
+        <li class="tm-nav-li"><a href="/" class="tm-nav-link active">Home</a></li>
+        <li class="tm-nav-li"><a href="/signout" class="tm-nav-link">Signout</a></li>
+        <li class="tm-nav-li"><a href="/aboutus" class="tm-nav-link">About Us</a></li>
+        <li class="tm-nav-li"><a href="/faqs" class="tm-nav-link">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="row tm-gallery">
+      <!-- gallery page 1 -->
+      <div id="tm-gallery-page-thali" class="tm-gallery-page">
+        {{#each it}}
+        <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+          <figure>
+            <img src="/public/items/{{this.id}}.png" alt="Image" class="img-fluid tm-gallery-img" />
+            <figcaption>
+              <h4 class="tm-gallery-title">{{this.name}}</h4>
+              <p class="tm-gallery-description">{{this.desc}}</p>
+              <p class="tm-gallery-price">Rs {{this.price}}</p>
+            </figcaption>
+          </figure>
+        </article>
+        {{/each}}
+      </div>
+    </div>
+  </main>
+  <footer>
+    <script src="/public/js/jquery.min.js"></script>
+    <script src="/public/js/parallax.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Handle click on paging links
+        $('.tm-paging-link').click(function (e) {
+          e.preventDefault();
+
+          var page = $(this).text().toLowerCase();
+          $('.tm-gallery-page').addClass('hidden');
+          $('#tm-gallery-page-' + page).removeClass('hidden');
+          $('.tm-paging-link').removeClass('active');
+          $(this).addClass("active");
+        });
+      });
+    </script>
+
+  </footer>
+</body>
+
+</html>

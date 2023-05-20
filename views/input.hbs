@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link type="text/css" href="/public/global.css" rel="stylesheet">
+  <script src="/public/tailwind.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="bg-red-800 h-[100px] pt-5">
+      <a href="/"><img src="/public/logo.png" class="h-16 mx-auto"></a>
+    </nav>
+  </header>
+  <main class="flex items-center">
+    <div class="inline-block w-[100px] md:w-[50vw] border h-[300px] mx-auto my-5 rounded=lg shadow">
+
+      <div class="mt-16 text-center">
+        <form class="flex flex-col items-center" action="/verify" method="post">
+
+          <label for="fname" class="mt-5">OTP </label>
+          <input type="text" name="otp" placeholder="000000" value="{{hola}}"
+            class="border shadow w-[30vw] h-12 rounded-xl px-3">
+
+          <input type="submit" value="Save"
+            class="px-5 border shadow-xl py-3 rounded mt-[4%] bg-red-900 text-white duration-500 font-semibold hover:shadow-xl hover:bg-white hover:text-red-900">
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

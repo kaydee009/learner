@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" href="/public/global.css" rel="stylesheet">
+    <script src="/public/tailwind.js"></script>
+
+    <style>
+        body {
+            background-image: url(/public/img/simple-house-01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <nav class="bg-red-800 h-[100px] pt-5">
+            <a href="/"><img src="/public/logo.png" class="h-16 mx-auto"></a>
+        </nav>
+    </header>
+    <main class="flex items-center">
+        <div
+            class="inline-block w-[100px] bg-[#ffffffdd] rounded md:w-[50vw] border py-12 mx-auto my-24 rounded=lg shadow">
+            <h1 class="text-center text-4xl font-semibold mt-4">Signup</h1>
+
+            <div class="mt-16 text-center">
+                <form class="flex flex-col items-center" action="/otp" method="post">
+                    <label for="name">Phone </label>
+                    <input name="phone" type="text" placeholder="9372940384"
+                        class="phone border shadow w-[30vw] h-12 rounded-xl px-3">
+
+                    <label for="fname" class="mt-5">Firstname </label>
+                    <input type="text" name="fname" placeholder="Alan"
+                        class="border shadow w-[30vw] h-12 rounded-xl px-3">
+                    <label for="lname" class="mt-5">Lastname </label>
+                    <input type="text" name="lname" placeholder="Walker"
+                        class="border shadow w-[30vw] h-12 rounded-xl px-3">
+
+                    <label for="location" class="mt-5">Location </label>
+                    <input type="text" name="location" placeholder="Chandigarh"
+                        class="border shadow w-[30vw] h-12 rounded-xl px-3">
+                    <label for="location" class="mt-5">password </label>
+                    <input type="password" name="pass" placeholder="********"
+                        class="border shadow w-[30vw] h-12 rounded-xl px-3">
+
+
+                    <button
+                        class="submit px-5 border shadow-xl py-3 rounded mt-[5%] bg-red-900 text-white duration-500 font-semibold hover:shadow-xl hover:bg-white hover:text-red-900">
+                        Submit
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <script>
+            // document.getElementsByClassName("otp")[0].addEventListener("click", (e) => {
+            //     e.preventDefault()
+
+            //     var xhr = new XMLHttpRequest();
+            //     xhr.open("POST", "/otp", true);
+            //     xhr.setRequestHeader('Content-Type', 'application/json');
+            //     xhr.send(JSON.stringify({
+            //         phone: document.getElementsByClassName("phone")[0].value
+            //     }));
+
+            //     e.target.style = "none"
+
+            //     document.getElementsByClassName("otp")[0].classList.add("hidden");
+            //     document.getElementsByClassName("submit")[0].classList.remove("hidden");
+            //     document.getElementsByClassName("otptext")[0].classList.remove("hidden");
+            // })
+        </script>
+    </footer>
+</body>
+
+</html>
